@@ -13,5 +13,9 @@ https://storage.googleapis.com/tekton-releases/triggers/latest/interceptors.yaml
 echo "Installing dashboard for tekton"
 
 kubectl apply --filename https://storage.googleapis.com/tekton-releases/dashboard/latest/release.yaml
+kubectl apply -f https://storage.googleapis.com/tekton-releases/triggers/latest/release.yaml
+kubectl apply -f https://storage.googleapis.com/tekton-releases/triggers/latest/interceptors.yaml
+kubectl apply -f https://raw.githubusercontent.com/tektoncd/triggers/main/examples/rbac.yaml
+
 
 
