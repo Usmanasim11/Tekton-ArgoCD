@@ -20,3 +20,12 @@ kubectl apply -f https://raw.githubusercontent.com/tektoncd/triggers/main/exampl
 echo "Installing tekton cli"
 rpm -Uvh https://github.com/tektoncd/cli/releases/download/v0.31.2/tektoncd-cli-0.31.2_Linux-64bit.rpm
 
+echo "Installing tekton tasks"
+
+kubectl apply -f https://raw.githubusercontent.com/tektoncd/catalog/main/task/git-clone/0.9/git-clone.yaml
+kubectl apply -f https://raw.githubusercontent.com/tektoncd/catalog/main/task/buildah/0.6/buildah.yaml
+kubectl apply -f https://raw.githubusercontent.com/tektoncd/catalog/main/task/npm/0.1/npm.yaml
+
+echo "Installing OpenEBS Operator"
+
+kubectl apply -f https://openebs.github.io/charts/openebs-operator.yaml
